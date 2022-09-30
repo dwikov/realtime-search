@@ -33,12 +33,21 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 gem 'mongoid'
+
 gem 'react_on_rails', '13.0.1'
 gem 'shakapacker', '6.4.0'
+
+gem 'string-similarity'
+
+gem 'stopwords-filter', require: 'stopwords'
+gem 'stemmify', '~> 0.0.2'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rspec-rails', ">= 3.9.0"
+  gem "factory_bot_rails"
+  gem 'database_cleaner-mongoid'
 end
 
 group :development do
@@ -58,3 +67,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "mini_racer", platforms: :ruby

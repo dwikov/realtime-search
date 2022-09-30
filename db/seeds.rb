@@ -1,0 +1,14 @@
+article1 = Article.new(title: 'article Lorem', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum semper justo, et eleifend magna fermentum facilisis. Cras eget lacus eu nunc fringilla accumsan. Etiam vel nibh iaculis, consequat est sit amet, efficitur eros. Maecenas eget metus ut libero rutrum aliquet. Donec ultricies auctor est ut scelerisque. Suspendisse sodales erat blandit, feugiat leo vitae, vehicula tellus. Vestibulum elementum sem purus, sed aliquam libero mollis vitae. Sed non rhoncus sapien. Cras pharetra lacus at lectus pulvinar, vel ultricies mi euismod. Aliquam at semper odio. Quisque ut tincidunt lorem. Fusce enim ipsum, pretium at ultricies in, tristique aliquam orci. Sed vitae mauris nisl.')
+article1.save
+
+article2 = Article.new(title: 'article Quisque', body: 'Quisque at vehicula lorem. Nam eget enim vel dolor suscipit eleifend nec fermentum erat. Phasellus lectus lectus, porta eget rhoncus sit amet, placerat eget lorem. Sed efficitur non purus vitae aliquam. Suspendisse ac egestas massa, eget vestibulum nisi. Sed enim erat, suscipit et diam et, facilisis dapibus quam. Nam quis sollicitudin lorem. Morbi malesuada molestie purus. Aenean purus neque, egestas ac magna non, aliquet varius libero. Pellentesque ac dolor suscipit turpis ullamcorper vehicula. Vestibulum sed dui tellus.')
+article2.save
+
+article3 = Article.new(title: 'article Donec', body: 'Donec vestibulum vel arcu in tempor. Donec nibh leo, porttitor a arcu vitae, lacinia blandit eros. Cras sagittis bibendum mauris, dapibus aliquam mauris tincidunt sit amet. Praesent imperdiet a massa eu hendrerit. Fusce purus massa, feugiat id semper eu, fringilla ut nulla. Nulla quis magna elementum, pretium odio at, fermentum dui. Aenean eget tincidunt nulla. Mauris scelerisque varius nisl vel venenatis. Ut vehicula id arcu sit amet ornare. Suspendisse nec dignissim eros. Fusce ut risus sed massa eleifend interdum. Cras mattis sapien urna, et ullamcorper mauris semper in.')
+article3.save
+
+article4 = Article.new(title: 'article Etiam', body: 'Etiam hendrerit purus et augue rhoncus finibus. Donec pulvinar vitae erat quis sagittis. In euismod sodales risus, et blandit risus lacinia at. Nunc congue efficitur eros, ut posuere nisi pretium mattis. Donec pharetra volutpat leo eu maximus. Sed et consequat nulla. Duis eleifend leo vitae lacus accumsan, eget sollicitudin nunc gravida.')
+article4.save
+
+article5 = Article.new(title: 'Emil Hajric', body: 'My name is Emil Hajric. I am an entrepreneur and now founder of a knowledge base software company that has sprung out from a need for a better knowledge management tool while writing articles on this website. I was looking to solve the problem of organizational learning, organizational memory, knowledge management, and so on.')
+article5.save
