@@ -35,7 +35,7 @@ gem "bootsnap", require: false
 gem 'mongoid'
 
 gem 'react_on_rails', '13.1.0'
-gem 'shakapacker', '6.4.0'
+gem 'shakapacker', '6.5.2'
 
 gem 'string-similarity'
 
