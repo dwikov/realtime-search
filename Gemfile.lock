@@ -182,7 +182,7 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
-    react_on_rails (13.0.1)
+    react_on_rails (13.1.0)
       addressable
       connection_pool
       execjs (~> 2.5)
@@ -268,7 +268,7 @@ DEPENDENCIES
   mongoid
   puma (~> 5.0)
   rails (~> 7.0.4)
-  react_on_rails (= 13.0.1)
+  react_on_rails (= 13.1.0)
   rspec-rails (>= 3.9.0)
   selenium-webdriver
   shakapacker (= 6.4.0)
