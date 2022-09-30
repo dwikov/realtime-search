@@ -4,7 +4,6 @@ import BarChart from './BarChart';
 import ResultsTable from './Table';
 import { Container } from 'react-bootstrap';
 import { getAnalytics, matchAll, postAnalytics } from '../api';
-import styles from './Search.module.css';
 
 const Search = () => {
   const [query, setQuery] = useState('');
