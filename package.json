@@ -23,7 +23,7 @@
     "react-d3-library": "^1.1.8",
     "react-dom": "^18.2.0",
     "react-on-rails": "13.0.1",
-    "shakapacker": "6.5.2",
+    "shakapacker": "6.4.0",
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "5",
     "universal-cookie": "^4.0.4",
