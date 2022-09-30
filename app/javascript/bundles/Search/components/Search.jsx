@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import BarChart from './BarChart';
 import ResultsTable from './Table';
-import './Search.module.css';
 import { Container } from 'react-bootstrap';
 import { getAnalytics, matchAll, postAnalytics } from '../api';
 

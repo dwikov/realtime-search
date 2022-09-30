@@ -6154,10 +6154,10 @@ sha.js@2.2.6:
   resolved "https://registry.yarnpkg.com/sha.js/-/sha.js-2.2.6.tgz#17ddeddc5f722fb66501658895461977867315ba"
   integrity sha512-GC+qN4sf/O6bDwz6CHaz8HVQfLbbNyIsXpTZLiD5c1badnWA63WVAH1msoCq+fXcV0dZ50jxTqKA8seu40845A==
 
-shakapacker@6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/shakapacker/-/shakapacker-6.4.0.tgz#f49ad8bb51eb1a151b190b588ad467c6e6f62e69"
-  integrity sha512-bxxi7Lla3n2fnFjxVv6BtD2vcTEZIm2eb29WkJqZBmpFVT9tnwbd3XQISD9eOst6kTEJu2ruUp7dGvuEjpxwkg==
+shakapacker@6.5.2:
+  version "6.5.2"
+  resolved "https://registry.yarnpkg.com/shakapacker/-/shakapacker-6.5.2.tgz#dda95543107a71c7ada3f6ee102a1a31563c6738"
+  integrity sha512-32hpr/AuyQJEk/4J8quL/xLPl+NPR0mBvJ3D9AtwHIkbSTUA0++LZrvVO+aQ4S1Uy3Iz2KSI/JVRGGD/C4SFFg==
   dependencies:
     glob "^7.2.0"
     js-yaml "^4.1.0"
@@ -6947,7 +6947,7 @@ webpack-sources@^3.2.3:
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.3.tgz#2d4daab8451fd4b240cc27055ff6a0c2ccea0cde"
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
-webpack@5:
+webpack@5.74.0:
   version "5.74.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.74.0.tgz#02a5dac19a17e0bb47093f2be67c695102a55980"
   integrity sha512-A2InDwnhhGN4LYctJj6M1JEaGL7Luj6LOmyBHjcI8529cm5p6VXiTIW2sn6ffvEAKmveLzvu4jrihwXtPojlAA==

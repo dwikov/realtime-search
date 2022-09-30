@@ -23,11 +23,11 @@
     "react-d3-library": "^1.1.8",
     "react-dom": "^18.2.0",
     "react-on-rails": "13.0.1",
-    "shakapacker": "6.4.0",
+    "shakapacker": "6.5.2",
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "5",
     "universal-cookie": "^4.0.4",
-    "webpack": "5",
+    "webpack": "5.74.0",
     "webpack-assets-manifest": "5",
     "webpack-cli": "4",
     "webpack-dev-server": "^4.11.1",
@@ -47,7 +47,7 @@
     "react-refresh": "^0.14.0"
   },
   "engines": {
-    "node": "16.17.1",
-    "yarn": "1.22.4"
+    "node": "13.9.0",
+    "yarn": "1.22.19"
   }
 }
