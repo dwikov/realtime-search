@@ -4,16 +4,16 @@ development:
     # Defines the default client. (required)
     default:
       # Mongoid can connect to a URI accepted by the driver:
-      # uri: mongodb://user:password@mongodb.domain.com:27017/test_ror_mongo_development
+      uri: mongodb+srv://tmgbug:0dw2ikoo2WuqittW@cluster0.b6iuwwj.mongodb.net/reactive_search?retryWrites=true&w=majority
 
       # Otherwise define the parameters separately.
       # This defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: test_ror_mongo_development
+      # database: test_ror_mongo_development
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
-      hosts:
-        - localhost:27017
+      # hosts:
+      #   - localhost:27017
       options:
         # Note that all options listed below are Ruby driver client options (the mongo gem).
         # Please refer to the driver documentation of the version of the mongo gem you are using
@@ -64,7 +64,7 @@ development:
         # local_threshold: 0.015
 
         # The timeout in seconds for selecting a server for an operation. (default: 30)
-        # server_selection_timeout: 30
+        server_selection_timeout: 5
 
         # The maximum number of connections in the connection pool. (default: 5)
         # max_pool_size: 5
@@ -183,3 +183,47 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+
+production:
+  # Configure available database sessions. (required)
+  sessions:
+    default:
+      # The standard MongoDB connection URI allows for easy replica set 
+      # connection setup. 
+      # Use environment variables or a config file to keep your 
+      # credentials safe.
+      uri: 'mongodb://[username]:[password]@ds043497.mongolab.com:43497/[database]' 
+      options: 
+        # The default consistency is :eventual, which reads from 
+        # secondaries when possible. 
+        # Strong forces reads to primary. 
+        # We recommend using strong consistency.
+        consistency: :strong
+
+        # max_retries specifies the number of times to attempt an 
+        # operation before giving up. Default 30 seconds
+        max_retries: 30
+
+        # retry_interval specifies the number of seconds to wait before 
+        # retrying a single operation. Default 1 second.
+        retry_interval: 1
+
+        # The default timeout is 5, which is the time in seconds for an 
+        # operation to time out.
+        # We recommend 15 because it allows for plenty of time in most 
+        # operating environments.
+        # Mongoid doubles the configured value (known issue) so 15 
+        # results in a timeout of 30s.
+        # Note that if you have a long-running query (over 30 seconds), 
+        # it will time out.
+        # See our example for long-running queries in the blog post 
+        # referenced above.
+        timeout: 15
+
+        # Set this to ensure that your writes are a round-trip operation
+        # and are confirmed by the system. Default (false).
+        safe: true
+
+        # refresh_interval specifies the number of seconds to cache information
+        # about a node. Default is 300 seconds (5 minutes).
+        refresh_interval: 10
