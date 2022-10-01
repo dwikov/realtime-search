@@ -7,7 +7,6 @@ module ApplicationHelper
     cookie = CGI::unescape(cookie)
     salt   = config.action_dispatch.authenticated_encrypted_cookie_salt
     encrypted_cookie_cipher = config.action_dispatch.encrypted_cookie_cipher || 'aes-256-gcm'
-    # serializer = ActiveSupport::MessageEncryptor::NullSerializer # use this line if you don't know your serializer
     serializer = ActionDispatch::Cookies::JsonSerializer
   
     key_generator = ActiveSupport::KeyGenerator.new(secret_key_base, iterations: 1000)
