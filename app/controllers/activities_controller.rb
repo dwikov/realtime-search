@@ -42,6 +42,6 @@ class ActivitiesController < ApplicationController
     end
 
     def user_session
-      request.headers["HTTP_COOKIE"].split(';').map{|c| c.split('=')}.to_h['_ror_test_session']
+      request.headers["HTTP_COOKIE"].split(';').map{|c| c.split('=')}.to_h['_realtime_search_session']
     end
 end

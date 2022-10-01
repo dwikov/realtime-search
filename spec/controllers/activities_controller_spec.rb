@@ -21,7 +21,7 @@ RSpec.describe ActivitiesController, type: :controller do
     end
 
     it "renders unique queries count json" do
-      request.headers["HTTP_COOKIE"] = "_ror_test_session=#{activity.user_session}"
+      request.headers["HTTP_COOKIE"] = "_realtime_search_session=#{activity.user_session}"
       get :index
       expect(json).to eq([{"_id"=>activity.query, "count"=>1}])
     end
@@ -46,7 +46,7 @@ RSpec.describe ActivitiesController, type: :controller do
       let (:activity) { build :activity}
       
       it "adds activity & renders unique queries count json" do 
-        request.headers["HTTP_COOKIE"] = "_ror_test_session=#{activity.user_session}"
+        request.headers["HTTP_COOKIE"] = "_realtime_search_session=#{activity.user_session}"
         post :create, :params => { :activity => activity.attributes }
 
         expect(json).to eq([{"_id"=>"mystr", "count"=>1}])
