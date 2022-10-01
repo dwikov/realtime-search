@@ -1,5 +1,6 @@
 class ActivitiesController < ApplicationController
   include ActivitiesHelper
+  include ApplicationHelper
 
   DELETE_SECONDS_LIMIT = 30
 
@@ -43,6 +44,7 @@ class ActivitiesController < ApplicationController
     end
 
     def user_session
-      request.headers["HTTP_COOKIE"].split(';').map{|c| c.split('=')}.to_h['_realtime_search_session']
+      cookie = request.headers["HTTP_COOKIE"].split(';').map{|c| c.split('=')}.to_h['_realtime_search_session']
+      verify_and_decrypt_session_cookie(cookie)["session_id"]
     end
 end
