@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
       {
         value: user_session,
         expires: 1.year.from_now,
-        path: '/api',
+        path: '/',
         secure: Rails.env.production?,
         httponly: Rails.env.production?
       }
