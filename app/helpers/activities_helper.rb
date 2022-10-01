@@ -4,12 +4,9 @@ require 'stemmify'
 module ActivitiesHelper
   MAX_ALLOWED_DISTANCE_RATIO = 0.3
 
-  """
-    Generates all of the prefixes of the current query, calculates the similarity between each prefix
-    and the latest added query, and returns true if the max similarity is more than allowed.
-  """
-  def check_if_similar(current_query, processed_latest_query)
+  def check_if_similar(current_query, latest_query)
     processed_current_query = process_query(current_query)
+    processed_latest_query = process_query(latest_query)
     return calculate_distance_ratio(processed_current_query, processed_latest_query) < MAX_ALLOWED_DISTANCE_RATIO
   end
 

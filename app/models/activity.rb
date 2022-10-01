@@ -9,11 +9,5 @@ class Activity
   validates :query, presence: true, allow_blank: false
   validates :user_session, presence: true, allow_blank: false
 
-  before_save :process_query_string
-
   private 
-
-  def process_query_string
-    self.query = process_query(query)
-  end
 end

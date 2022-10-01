@@ -15,9 +15,4 @@ RSpec.describe Activity, type: :model do
     activity = Activity.new(query: "how is emil hajric?")
     expect(activity).to be_invalid 
   end
-
-  it "should process query before save" do
-    activity = Activity.new(query: "how is emil hajric?", user_session: "some string")
-    expect { activity.save }.to change { activity.query }.from("how is emil hajric?").to("emil hajric")
-  end
 end

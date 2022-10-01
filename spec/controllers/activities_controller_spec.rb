@@ -57,7 +57,7 @@ RSpec.describe ActivitiesController, type: :controller do
         request.headers["HTTP_COOKIE"] = "_realtime_search_session=#{activity.user_session}"
         post :create, :params => { :activity => activity.attributes }
 
-        expect(json).to eq([{"_id"=>"mystr", "count"=>1}])
+        expect(json).to eq([{"_id"=>activity.query, "count"=>1}])
       end
 
     end
