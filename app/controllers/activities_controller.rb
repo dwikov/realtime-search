@@ -4,6 +4,7 @@ class ActivitiesController < ApplicationController
   DELETE_SECONDS_LIMIT = 30
 
   def index
+    
     render json: unique_queries_count
   end
 
