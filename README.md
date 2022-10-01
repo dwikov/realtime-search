@@ -24,7 +24,6 @@ This would reduce the query to contain only stemmed keywords showing the purpose
 analytics query stored in the database was sent less than 5 minutes ago, we would calculate the Levenshtein distance between that query and the current sent query to find the similarity between them. In case of high similarity, the old query would be removed, and the current one will be added. Otherwise, we would add the current one to the database, without removing the previous. 
 
 **2 seconds & 5 minutes are just constant parameters that could be tweaked for a better user experience.**
-
 ## Local Setup
 * Install `node`, `yarn` and `ruby`, using `nvm` and `rvm` is recommended.
 
@@ -49,6 +48,11 @@ foreman start -f Procfile.dev
 ```
 
 * Visit http://localhost:3000 to see the app.
+
+* You can run the specs using:
+```
+bundle exec rspec
+```
 
 ## Demo & Deployment
 
