@@ -38,11 +38,11 @@ const Search = () => {
 
 
   return (<>
-      <Container style={{marginTop: '5%'}}>
+      <Container style={{marginTop: '5%', paddingRight: '0', paddingLeft: '0'}}>
         <Form>
           <Form.Control type="search" placeholder="Search here" value={query} onChange={handleControlChange}/>
         </Form>
-        <Container style={{overflow: 'auto', height: '350px'}}>
+        <Container style={{overflow: 'auto', height: '350px', paddingRight: '0', paddingLeft: '0'}}>
           <ResultsTable results={results} />
         </Container>
       </Container>

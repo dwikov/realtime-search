@@ -2,7 +2,7 @@ require 'string/similarity'
 require 'stemmify'
 
 module ActivitiesHelper
-  MAX_ALLOWED_DISTANCE_RATIO = 0.3
+  MAX_ALLOWED_DISTANCE_RATIO = 0.6
 
   """
     Generates all of the prefixes of the current query, calculates the similarity between each prefix
@@ -10,7 +10,6 @@ module ActivitiesHelper
   """
   def check_if_similar(current_query, processed_latest_query)
     processed_current_query = process_query(current_query)
-    
     return calculate_distance_ratio(processed_current_query, processed_latest_query) < MAX_ALLOWED_DISTANCE_RATIO
   end
 

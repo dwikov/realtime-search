@@ -1,6 +1,7 @@
 require 'rails_helper'
 require 'database_cleaner/mongoid'
 
+
 DatabaseCleaner.strategy = :deletion
 
 RSpec.describe ActivitiesController, type: :controller do
@@ -12,17 +13,24 @@ RSpec.describe ActivitiesController, type: :controller do
     DatabaseCleaner.clean
   end
 
+  before :each do
+    allow_any_instance_of(ApplicationHelper).to receive(:verify_and_decrypt_session_cookie) { {"session_id" => "MyString"} }
+  end
+
   describe "GET #index" do
     let(:activity) { create :activity }
 
-    it "returns http success" do
+    before :each do
+      request.headers["HTTP_COOKIE"] = "_realtime_search_session=#{activity.user_session}"
+      
       get :index
+    end
+
+    it "returns http success" do
       expect(response).to have_http_status(:ok)
     end
 
     it "renders unique queries count json" do
-      request.headers["HTTP_COOKIE"] = "_realtime_search_session=#{activity.user_session}"
-      get :index
       expect(json).to eq([{"_id"=>activity.query, "count"=>1}])
     end
   end

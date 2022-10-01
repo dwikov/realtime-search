@@ -5,7 +5,6 @@ class ActivitiesController < ApplicationController
   DELETE_SECONDS_LIMIT = 30
 
   def index
-    
     render json: unique_queries_count
   end
 
@@ -45,6 +44,7 @@ class ActivitiesController < ApplicationController
 
     def user_session
       cookie = request.headers["HTTP_COOKIE"].split(';').map{|c| c.split('=')}.to_h['_realtime_search_session']
+
       verify_and_decrypt_session_cookie(cookie)["session_id"]
     end
 end
